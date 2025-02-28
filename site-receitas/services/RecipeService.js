@@ -8,5 +8,11 @@ export const RecipeService = {
     },
     listAll(){
         return ApiService.get(endPoint)
+    },
+    create(newRecipe){
+        return ApiService.post(endPoint, newRecipe);
+    },
+    remove(id){
+        return ApiService.delete(`${endPoint}?id=${id}`);
     }
 }
